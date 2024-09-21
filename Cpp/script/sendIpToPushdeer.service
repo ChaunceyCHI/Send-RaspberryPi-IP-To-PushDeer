@@ -1,0 +1,14 @@
+[Unit]
+Description=Send IP to PushDeer
+After=network.target
+
+[Service]
+ExecStart=/home/chi/rpi_project/sendIpToPushdeer/sendIpToPushdeer
+WorkingDirectory=/home/chi/rpi_project/sendIpToPushdeer
+User=chi
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
+
